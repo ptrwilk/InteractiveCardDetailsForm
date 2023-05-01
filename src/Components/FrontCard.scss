@@ -1,0 +1,65 @@
+@import url('../colors.css');
+
+#FrontCard{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 169px;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background: url('../assets/bg-card-front.png');
+    background-size: cover;
+    font-size: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: var(--white);
+
+    .img-logo{
+        width: 60px;
+    }
+
+    .card-number{
+        margin-top: auto;
+        margin-bottom: .7rem;
+        font-size: 1.8em;
+        letter-spacing: 3px;
+    }
+
+    .card-details{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .name{
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1em;
+        }
+
+        .exp-date{
+            letter-spacing: 1px;
+            font-size: 1em;
+        }
+    }
+
+    @media (min-width: 1045px) {
+        width: 447px;
+        height: 245px;
+        font-size: 15px;
+
+        .img-logo{
+            width: 100px;
+        }
+
+        .card-number{
+            letter-spacing: 5px;
+        }
+
+        .card-details{
+
+            .exp-date,
+            .name{
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+#InteractiveCardDetailsFormPage{
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    width: 100%;
+
+    .section-bg{
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .img-bg{
+            width: 100%;
+            height: 240px;
+        }
+
+        .back-card{
+            position: absolute;
+            top: 2rem;
+            margin-left: 2rem;
+        }
+
+        .front-card{
+            position: absolute;
+            top: 8.4rem;
+            margin-right: 2rem;
+        }
+    }
+
+    .form{
+        align-self: center;
+        display: grid;
+        gap: 1.5rem;
+        max-width: 800px;
+        margin-top: 10rem;
+        padding: 0 1.5rem;
+
+        .exp-cvc{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn{
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            font-size: 16px;
+            text-transform: none;
+            color: var(--white);
+            background: var(--verydarkviolet);
+        }
+    }
+
+    @media (min-width: 650px) {
+        .form{
+            grid-template-columns: 1fr 1fr;
+
+            .btn,
+            .exp-cvc{
+                grid-column: 1 / span 2;
+            }
+        }
+    }
+
+    @media (min-width: 1045px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+
+        .section-bg{
+            flex-direction: column;
+            justify-content: center;   
+            margin-right: 13rem;
+            max-width: 483px;
+
+            .img-bg{
+                height: 100vh;
+            }
+
+            .front-card,
+            .back-card{
+                top: auto;
+                right: 0;
+                margin: 0;
+            }
+
+            .front-card{
+                right: 0;
+                margin-bottom: 17rem;
+                transform: translateX(30%);
+            }
+
+            .back-card{
+                right: 0;
+                margin-top: 19rem;
+                transform: translateX(50%);
+            }
+        }
+
+        .form{
+            align-self: center;
+            justify-self: center;
+            grid-template-columns: 1fr;
+            max-width: 500px;
+            margin-top: 0;
+
+            .btn,
+            .exp-cvc{
+                grid-column: 1;
+            }
+
+            .btn{
+                max-width: 500px;
+            }
+        }
+
+        .complete{
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    @media (min-width: 1440px) {
+         grid-template-columns: 720px 720px;
+    }
+}
+

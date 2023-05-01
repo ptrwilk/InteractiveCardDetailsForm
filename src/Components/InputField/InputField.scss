@@ -1,0 +1,13 @@
+@import url('../../colors.css');
+
+#InputField{
+    font-size: 10px;
+
+    .caption{
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.4em;
+        color: var(--verydarkviolet);
+    }
+}
